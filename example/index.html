@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head></head>
+  <body>
+    <div id="container">
+      <ul id="track-list">
+      </ul>
+    </div>
+    <!-- Scripts -->
+    <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.tmpl.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../jquery.sc.api.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/example.js"></script>
+    <!-- Templates -->
+    <script id="track" type="text/html">
+      <li data-track-id="${id}">${$i}) <a href="${permalink_url}">${title}</a> <span>${duration}</span> <img src="${waveform_url}" width="250" height="18"></li>
+    </script>
+  </body>
+</html>

@@ -6,6 +6,10 @@
 *   http://www.opensource.org/licenses/mit-license.php
 */
 
+// TODOs
+// implement HTML5 uplaod flow
+// encrypt the security token in the localStorage
+
 (function($) {
   $.sc = $.sc || {};
   
@@ -36,7 +40,7 @@
           },
           onNonAuth: function(connectUrl, container) { // called when no valid token is found
             $('<a></a>', {
-              html: 'Authorize',
+              html: 'Connect to SoundCloud',
               href: connectUrl,
               'class': 'sc-authorize'
             })

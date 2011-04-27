@@ -12,7 +12,7 @@
 
 (function($) {
   $.sc = $.sc || {};
-  
+
   // api wrapper event dictionary
   var events = {
     AuthSuccess  : 'onScAuth',
@@ -23,7 +23,7 @@
     ApiError : 'onScApiError',
     UnSupported: 'onScApiUnsupported'
   };
-  
+
   $.sc.api = function(apiKey, callerSettings) {
     var settings = $.extend({
           debug: true, // if enabled, will print most errors into browser console
@@ -60,7 +60,7 @@
         },
         // utility for parsing params from query strings
         getParamInQuery = function(path, param) {
-          var match = path.match(new RegExp("(?:\\?|&)" + param + "=([^&]*)(?:&|$)"));
+          var match = path.match(new RegExp("(?:\\?|&|#)" + param + "=([^&]*)(?:&|$)"));
           if (match) {
             return decodeURIComponent(match[1]);
           }

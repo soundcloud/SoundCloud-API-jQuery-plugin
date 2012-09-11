@@ -142,7 +142,7 @@
           }
 
           return $.ajax({
-                    type: parmas.method,
+                    type: params.method,
                     url: 'https://api.' + settings.host + params.resource,
                     beforeSend: reqHeaders,
                     data: params.data || {},

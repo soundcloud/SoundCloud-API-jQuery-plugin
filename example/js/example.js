@@ -1,7 +1,8 @@
 (function($) {
-  var soundCloudApiKey = 'qqhlwkbJgox1DEssX9O1Dg';
-  var api = $.sc.api(soundCloudApiKey, {
+  var soundCloudApi_Client_ID  = '542bdb53829b5b7cf02988d566c708de';
+  var api = $.sc.api(soundCloudApi_Client_ID, {
     onAuthSuccess: function(user, container) {
+     if ( ! user.id ) { user = JSON.parse(user); }
       $('<span class="username">Logged in as: <strong>' + user.username + '</strong></a>').prependTo(container);
       console.log('you are SoundCloud user ' + user.username);
     }

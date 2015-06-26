@@ -1,12 +1,12 @@
 (function($) {
-  var soundCloudApiKey = 'qqhlwkbJgox1DEssX9O1Dg';
+  var soundCloudApiKey = 'Enter your Client ID here';
   var api = $.sc.api(soundCloudApiKey, {
     onAuthSuccess: function(user, container) {
       $('<span class="username">Logged in as: <strong>' + user.username + '</strong></a>').prependTo(container);
       console.log('you are SoundCloud user ' + user.username);
     }
   });
-  
+
   // wait for the API to be available
   $(document).bind($.sc.api.events.AuthSuccess, function(event) {
     var user = event.user;

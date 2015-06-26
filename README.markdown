@@ -1,19 +1,32 @@
-jQuery plugin: SoundCloud oAuth2 API wrapper
+## jQuery plugin: SoundCloud oAuth 2.0 API wrapper
 
-A simple usage example:
-include the plugin in your HTML code
+### A simple usage example
+
+Include the plugin in your HTML code:
+
+```html
 <script type="text/javascript" charset="utf-8" src="scripts/jquery.sc.api.js"></script>
-an then, initialize it
-var api = $.sc.api('qqhlwkbJgox1DEssX9O1Dg');
+```
 
-or handle the successful authorization yourself
+and then, initialize it:
+
+```javascript
+var api = $.sc.api('qqhlwkbJgox1DEssX9O1Dg');
+```
+
+or handle the successful authorization yourself:
+
+```javascript
 var api = $.sc.api('qqhlwkbJgox1DEssX9O1Dg', {
   onAuthSuccess: function(user, container) {
     alert('you are SoundCloud user ' + user.username);
   }
 });
+```
 
-also instead of passing the callbacks you can use the custom events
+also instead of passing the callbacks you can use the custom events:
+
+```javascript
 var api = $.sc.api('qqhlwkbJgox1DEssX9O1Dg');
 $(document).bind($.sc.api.events.AuthSuccess, function(event) {
   var user = event.user;
@@ -22,5 +35,8 @@ $(document).bind($.sc.api.events.AuthSuccess, function(event) {
     console.log(tracks);
   })
 });
+```
 
-Please refer to the wiki on GitHub project page for full documentation
+Please refer to the [wiki][] for full documentation.
+
+[wiki]: https://github.com/soundcloud/SoundCloud-API-jQuery-plugin/wiki
